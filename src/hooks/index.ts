@@ -1,3 +1,4 @@
+import withAuth from "./withAuth";
 import withGuest from "./withGuest";
 
-export { withGuest };
+export { withAuth, withGuest };
