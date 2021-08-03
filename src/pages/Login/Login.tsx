@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { LockOutlined } from "@material-ui/icons";
 import { LoadingButton } from "@material-ui/lab";
+import { withGuest } from "hooks";
 import * as React from "react";
 import firebase from "util/firebase";
 
@@ -96,4 +97,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default withGuest(Login);
