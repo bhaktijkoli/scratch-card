@@ -2,11 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { CssBaseline } from "@material-ui/core";
+import { ThemeProvider, StyledEngineProvider } from "@material-ui/core/styles";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import theme from "theme";
+import "util/firebase";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
